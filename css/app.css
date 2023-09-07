@@ -72,3 +72,7 @@ img.about {
 .larger {
 	font-size: 1.15	em;
 }
+
+div.info {
+	margin:5px;
+}
