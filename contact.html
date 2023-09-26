@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>lewisev - Contact</title>
+
+	<meta name="description" content="lewisev page">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/contact.css">
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+
+</head>
+
+<body>
+
+	<nav>
+		<div>
+			<a class="nav previous" href="https://awrose.github.io/">← previous student</a>
+			<div class="middle">
+				<a class="nav middle" href="/">Home</a>
+				<a class="nav middle" href="/aboutMe.html">About me</a>
+				<a class="nav middle active" href="/contact.html">Contact</a>
+				<a class="nav middle" href="https://mattm401.github.io/">CISC474 info</a>
+			</div>
+			<a class="nav next" href="https://rgud0.github.io/">next student →</a>
+		</div>
+	</nav>
+
+	<br>
+
+
+
+	<div class="center outline heading">
+		<h1>Contact</h1>
+	</div>
+
+	<div class="center">
+		<form id="contactme">
+			<p>
+				<label for="user_fname">First name: </label>
+				<input id="user_fname" name="user_fname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="first" required />
+			</p>
+
+			<p>
+				<label for="user_lname">Last name:</label>
+				<input id="user_lname" name="user_lname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="last" required />
+			</p>
+
+			<p>
+				<label for="user_email">E-mail address:</label>
+				<input type="email" id="user_email" name="user_email" placeholder="hello@world.com" required>
+			</p>
+
+
+			<p>
+				<label for="user_phone">Phone number:</label>
+
+				<input type="tel" id="user_phone" name="user_phone" maxlength="12" size="12"
+					pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="987-654-3210"
+					onInput="this.value = phoneFormat(this.value)" required />
+			</p>
+			<p>
+				<label for="user_message">Your message:</label>
+				<textarea id="user_message" name="user_message" maxlength="140" rows="7" required></textarea>
+			</p>
+			<button id="submit">Submit</button>
+		</form>
+		<br><br>
+		<div class="status" id="form_status">
+		</div>
+	</div>
+
+
+	<script src="js/contact.js"></script>
+</body>
+
+</html>

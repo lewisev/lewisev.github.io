@@ -1,0 +1,163 @@
+body {
+	margin:20px;
+	outline: 5px dashed #408c42;
+	border-radius: 13px;
+	height: 90vh;
+	padding: 3px;
+	min-height: 50vh;
+}
+
+.outline {
+	outline: 4px dashed #3ffb46;
+	border-radius: 5px;
+	background: rgb(63,251,70);
+	background: radial-gradient(circle, rgba(63,251,70,1) 0%, rgba(70,242,252,1) 100%);
+}
+
+/* --- Navigation Bar --- */
+
+nav div {
+	background: #def2df;
+	border-radius: 13px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav {
+	position: relative;
+}
+
+.nav:hover {
+    background: rgba(63,251,70, 0.65);
+}
+
+.nav::after {
+	position: absolute;
+	content: "";
+	background: #408c42;
+	bottom: 0;
+	right: 0;
+	height: 2px;
+	border-radius: 10px;
+	width: 0%;
+	transition: 225ms ease-in-out;
+}
+
+.nav:hover::after {
+	width: 100%;
+	left: 0;
+}
+
+nav a {
+	color: #000 !important;
+}
+
+nav .middle {
+	gap: 20px;	
+}
+
+a:visited {
+	color: #000 !important;
+}
+
+a.nav {
+	text-decoration:none;
+	background: rgba(63,251,70, 0.25);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+nav .active {
+	background: rgba(63,251,70, 0.55);
+	outline: 2px dotted #408c42;
+
+}
+
+/* --- --- --- --- --- --- */
+
+
+
+
+
+.center {
+	text-align: center;
+}
+
+.heading {
+	color: #408c42;
+	width: -moz-fit-content;
+	width: fit-content;
+	padding: 0 5px;
+	margin: 10px auto 10px;
+}
+
+a {
+	color: #3ab8bf;
+}
+
+
+
+img {
+	border-radius: 25px;
+	
+}
+
+img.profile {
+	width:300px;
+	height:300px;
+}
+
+img.about {
+	width:200px;
+	height:200px;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.larger {
+	font-size: 1.15	em;
+}
+
+div.info {
+	margin:5px;
+}
+
+
+.lds-hourglass {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+  }
+  .lds-hourglass:after {
+	content: " ";
+	display: block;
+	border-radius: 50%;
+	width: 0;
+	height: 0;
+	margin: 8px;
+	box-sizing: border-box;
+	border: 32px solid rgba(63,251,70, 0.55);;
+	border-color: rgba(63,251,70, 0.55) transparent rgba(63,251,70, 0.55) transparent;
+	animation: lds-hourglass 1.2s infinite;
+  }
+  @keyframes lds-hourglass {
+	0% {
+	  transform: rotate(0);
+	  animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	}
+	50% {
+	  transform: rotate(900deg);
+	  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+	100% {
+	  transform: rotate(1800deg);
+	}
+  }
+  

@@ -1,0 +1,32 @@
+/* --- Contact validation --- */
+
+input:invalid, textarea:invalid {
+    border: 2px solid rgb(247, 82, 82);
+    box-shadow: 0 0 2px 1px rgb(247, 82, 82);
+    border-radius: 4px;
+}
+
+input:valid, textarea:valid{
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+
+p > label {
+    display: block;
+}
+
+textarea {
+    min-width: 30vw;
+    height: auto;
+}
+
+#form_status {
+    color: rgb(64, 140, 66);
+    font-weight: bold;
+}
+
+#form_status > div.error {
+    color: rgb(247, 82, 82);
+    font-weight: bold;
+}
