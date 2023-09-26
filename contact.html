@@ -15,8 +15,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/contact.css">
 
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </head>
 
@@ -47,12 +46,12 @@
 		<form id="contactme">
 			<p>
 				<label for="user_fname">First name: </label>
-				<input id="user_fname" name="user_fname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="first" required />
+				<input id="user_fname" name="user_fname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="first" required>
 			</p>
 
 			<p>
 				<label for="user_lname">Last name:</label>
-				<input id="user_lname" name="user_lname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="last" required />
+				<input id="user_lname" name="user_lname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="last" required>
 			</p>
 
 			<p>
@@ -66,7 +65,7 @@
 
 				<input type="tel" id="user_phone" name="user_phone" maxlength="12" size="12"
 					pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="987-654-3210"
-					onInput="this.value = phoneFormat(this.value)" required />
+					onInput="this.value = phoneFormat(this.value)" required>
 			</p>
 			<p>
 				<label for="user_message">Your message:</label>
