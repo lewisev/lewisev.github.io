@@ -1,13 +1,23 @@
+/* --- Color Palette --- */
+:root {
+	--primary: #408C42;
+	--secondary: #779974;
+	--light: #F4FbF3;
+	--alternative: #F6EDD9;
+  }
+
+
+
 /* --- Contact validation --- */
 
 input:invalid, textarea:invalid {
-    border: 2px solid rgb(247, 82, 82);
-    box-shadow: 0 0 2px 1px rgb(247, 82, 82);
+    border: 2px solid var(--secondary);
+    box-shadow: 0 0 3px 1px var(--secondary);
     border-radius: 4px;
 }
 
 input:valid, textarea:valid{
-    border: 2px solid black;
+    border: 2px solid var(--secondary);
     border-radius: 4px;
 }
 
@@ -22,11 +32,11 @@ textarea {
 }
 
 #form_status {
-    color: rgb(64, 140, 66);
+    color: var(--primary);
     font-weight: bold;
 }
 
 #form_status > div.error {
-    color: rgb(247, 82, 82);
+    color: var(--primary);
     font-weight: bold;
 }

@@ -3,6 +3,15 @@
 <html lang="en">
 
 <head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KESL9DG08E"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-KESL9DG08E');
+	</script>
 	<meta charset="utf-8">
 
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -16,66 +25,98 @@
 	<link rel="stylesheet" href="css/contact.css">
 
 	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
 
+	<!-- Navigation Bar -->
 	<nav>
 		<div>
-			<a class="nav previous" href="https://awrose.github.io/">← previous student</a>
-			<div class="middle">
+			<div class="nav name">Evan Lewis</div>
+			<div class="nav middle">
 				<a class="nav middle" href="/">Home</a>
-				<a class="nav middle" href="/aboutMe.html">About me</a>
-				<a class="nav middle active" href="/contact.html">Contact</a>
-				<a class="nav middle" href="https://mattm401.github.io/">CISC474 info</a>
+				<a class="nav middle" href="/projects.html">Projects</a>
+				<a class="nav middle" href="/resume.html">Resume</a>
+				<div class="dropdown">
+					<a class="nav dropdown">Class Links</a>
+					<div class="dropdown links">
+						<a class="" href="https://mattm401.github.io/">[CISC474 info]</a>
+						<a class="" href="https://rgud0.github.io/">next student →</a>
+						<a class="" href="https://awrose.github.io/">← previous student</a>
+					</div>
+				</div>
 			</div>
-			<a class="nav next" href="https://rgud0.github.io/">next student →</a>
+			<div class="nav socials">
+				<a class="nav icon" href="https://github.com/lewisev/">
+					<i class="bi bi-github"></i>
+				</a>
+				<a class="nav icon" href="mailto:evan@lewiscenter.net">
+					<i class="bi bi-envelope-fill"></i>
+				</a>
+
+			</div>
 		</div>
 	</nav>
 
-	<br>
+	<!-- Content -->
+	<div class="content">
 
 
+		<div>
+			<h1 class="heading">Contact me</h1>
 
-	<div class="center outline heading">
-		<h1>Contact</h1>
-	</div>
+			<form id="contactme">
+				<p>
+					<label for="user_fname">First name: </label>
+					<input id="user_fname" name="user_fname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="first" required>
+				</p>
 
-	<div class="center">
-		<form id="contactme">
-			<p>
-				<label for="user_fname">First name: </label>
-				<input id="user_fname" name="user_fname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="first" required>
-			</p>
+				<p>
+					<label for="user_lname">Last name:</label>
+					<input id="user_lname" name="user_lname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="last" required>
+				</p>
 
-			<p>
-				<label for="user_lname">Last name:</label>
-				<input id="user_lname" name="user_lname" pattern="\s*[a-zA-Z][\s\S]*" placeholder="last" required>
-			</p>
-
-			<p>
-				<label for="user_email">E-mail address:</label>
-				<input type="email" id="user_email" name="user_email" placeholder="hello@world.com" required>
-			</p>
+				<p>
+					<label for="user_email">E-mail address:</label>
+					<input type="email" id="user_email" name="user_email" placeholder="hello@world.com" required>
+				</p>
 
 
-			<p>
-				<label for="user_phone">Phone number:</label>
+				<p>
+					<label for="user_phone">Phone number:</label>
 
-				<input type="tel" id="user_phone" name="user_phone" maxlength="12" size="12"
-					pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="987-654-3210"
-					onInput="this.value = phoneFormat(this.value)" required>
-			</p>
-			<p>
-				<label for="user_message">Your message:</label>
-				<textarea id="user_message" name="user_message" maxlength="140" rows="7" required></textarea>
-			</p>
-			<button id="submit">Submit</button>
-		</form>
-		<br><br>
-		<div class="status" id="form_status">
+					<input type="tel" id="user_phone" name="user_phone" maxlength="12" size="12"
+						pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="987-654-3210"
+						onInput="this.value = phoneFormat(this.value)" required>
+				</p>
+				<p>
+					<label for="user_message">Your message:</label>
+					<textarea id="user_message" name="user_message" maxlength="140" rows="7" required></textarea>
+				</p>
+				<button id="submit">Submit</button>
+			</form>
+			<br><br>
+			<div class="status" id="form_status">
+			</div>
 		</div>
+
+		<!-- Footer -->
+		<footer>
+			<p>
+				Evan Lewis
+				•
+				<a href="/contact.html">Contact</a>
+				•
+				<a href="/aboutme.html">About me</a>
+			</p>
+		</footer>
+
 	</div>
 
 

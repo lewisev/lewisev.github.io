@@ -1,163 +1,304 @@
-body {
-	margin:20px;
-	outline: 5px dashed #408c42;
-	border-radius: 13px;
-	height: 90vh;
-	padding: 3px;
-	min-height: 50vh;
+/* --- Color Palette --- */
+:root {
+  --primary: #408c42;
+  --secondary: #779974;
+  --light: #f4fbf3;
+  --alternative: #f6edd9;
 }
 
-.outline {
-	outline: 4px dashed #3ffb46;
-	border-radius: 5px;
-	background: rgb(63,251,70);
-	background: radial-gradient(circle, rgba(63,251,70,1) 0%, rgba(70,242,252,1) 100%);
+/* --- Body / Content --- */
+body {
+  font-family: "ABeeZee", sans-serif;
+  margin: 0;
+}
+
+.content {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+div.main {
+  font-size: 1.5em;
+  align-items: center;
+  position: relative;
+  margin-top: 5rem;
 }
 
 /* --- Navigation Bar --- */
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 2px solid var(--light);
+}
 
 nav div {
-	background: #def2df;
-	border-radius: 13px;
-	display: flex;
-	justify-content: space-between;
+  border-radius: 13px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  height: 3em;
+  align-items: center;
+  background: #fff
+}
+
+div.nav {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.nav.socials {
+  display: none;
+}
+
+.dropdown.links {
+  display: none;
+  margin-left: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.dropdown:hover .dropdown.links {
+  display: grid;
 }
 
 .nav {
-	position: relative;
+  position: relative;
 }
 
-.nav:hover {
-    background: rgba(63,251,70, 0.65);
+div.nav.name {
+  font-size: 1em;
 }
 
-.nav::after {
-	position: absolute;
-	content: "";
-	background: #408c42;
-	bottom: 0;
-	right: 0;
-	height: 2px;
-	border-radius: 10px;
-	width: 0%;
-	transition: 225ms ease-in-out;
+a.nav.icon {
+  margin: 2px;
+}
+
+a.nav::after {
+  position: absolute;
+  content: "";
+  background: var(--primary);
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 10px;
+  width: 0%;
+  transition: 225ms ease-in-out;
 }
 
 .nav:hover::after {
-	width: 100%;
-	left: 0;
+  width: 100%;
+  left: 0;
 }
 
 nav a {
-	color: #000 !important;
+  color: #000 !important;
 }
 
 nav .middle {
-	gap: 20px;	
+  gap: 20px;
 }
 
 a:visited {
-	color: #000 !important;
+  color: #000 !important;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
 }
 
 a.nav {
-	text-decoration:none;
-	background: rgba(63,251,70, 0.25);
-	padding: 10px;
-	border-radius: 10px;
+  text-decoration: none;
+  background: var(--alternative);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.75em;
 }
 
 nav .active {
-	background: rgba(63,251,70, 0.55);
-	outline: 2px dotted #408c42;
-
+  outline: 2px dashed var(--secondary);
+  font-weight: bold;
 }
 
 /* --- --- --- --- --- --- */
 
+/* --- Footer --- */
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0px;
+  height: auto;
+  overflow: hidden;
+  border-top: 2px solid var(--secondary);
+  background: var(--light);
+  width: 100%;
+}
 
-
+/* --- Center Text--- */
 
 .center {
-	text-align: center;
+  text-align: center;
 }
+
+/* --- Headings --- */
 
 .heading {
-	color: #408c42;
-	width: -moz-fit-content;
-	width: fit-content;
-	padding: 0 5px;
-	margin: 10px auto 10px;
+  font-size: 2.25em;
+  color: var(--primary);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 5px;
+  margin: 10px auto 10px;
 }
 
+/* --- Links --- */
 a {
-	color: #3ab8bf;
+  color: #000;
 }
 
-
+/* --- Images --- */
 
 img {
-	border-radius: 25px;
-	
+  border-radius: 25px;
 }
 
 img.profile {
-	width:300px;
-	height:300px;
+  min-width: 30px;
+  max-width: 300px;
+  max-height: 300px;
+  height: auto;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 img.about {
-	width:200px;
-	height:200px;
+  width: 200px;
+  height: 200px;
 }
 
+/* --- Floats --- */
+
 .right {
-	float: right;
+  float: right;
 }
 
 .left {
-	float: left;
+  float: left;
 }
 
 .larger {
-	font-size: 1.15	em;
+  font-size: 1.15 em;
 }
 
-div.info {
-	margin:5px;
-}
-
+/* --- Loading Symbol (hourglass) --- */
 
 .lds-hourglass {
-	display: inline-block;
-	position: relative;
-	width: 80px;
-	height: 80px;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid var(--secondary);
+  border-color: var(--secondary) transparent var(--secondary) transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-  .lds-hourglass:after {
-	content: " ";
-	display: block;
-	border-radius: 50%;
-	width: 0;
-	height: 0;
-	margin: 8px;
-	box-sizing: border-box;
-	border: 32px solid rgba(63,251,70, 0.55);;
-	border-color: rgba(63,251,70, 0.55) transparent rgba(63,251,70, 0.55) transparent;
-	animation: lds-hourglass 1.2s infinite;
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-  @keyframes lds-hourglass {
-	0% {
-	  transform: rotate(0);
-	  animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-	}
-	50% {
-	  transform: rotate(900deg);
-	  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-	}
-	100% {
-	  transform: rotate(1800deg);
-	}
+  100% {
+    transform: rotate(1800deg);
   }
-  
+}
+
+div.about {
+  padding: 15px;
+}
+
+.bulletless {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+  gap: 0.75rem;
+  padding: 0.75rem;
+}
+
+.card {
+  position: relative;
+  background-color: var(--secondary);
+  border: 4px solid var(--primary);
+  border-radius: 8px;
+}
+
+.card_image {
+  width: 100%;
+  padding-top: 60%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card_image img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_content {
+  padding: 10px;
+}
+
+.card_title {
+	font-weight: bold;
+	font-size: large;
+  margin-bottom: 20px;
+}
+
+.resume {
+	height:100%;
+}
+
+/* --- Responsiveness --- */
+@media screen and (min-width: 800px) {
+  div.main {
+    display: flex;
+    margin-top: 0rem;
+  }
+
+  div.nav.name {
+    font-size: 1.35em;
+  }
+
+  a.nav {
+    font-size: 1em;
+  }
+
+  div.nav.socials {
+    display: flex;
+  }
+}
